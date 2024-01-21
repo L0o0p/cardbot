@@ -1,0 +1,12 @@
+// 定义全局变量
+$color: #cfc;
+
+body {
+    background-color: $color;
+    // 禁用文字选中
+    user-select: none;
+}
+
+img {
+    -webket-user-drag: none;
+}
