@@ -1,16 +1,14 @@
-// import { useState } from 'react'
-
-// import './App.css'
+// import { useState } from "react"
+import { useRoutes } from "react-router-dom"
+import router from "./Router"
 
 function App() {
   // const [count, setCount] = useState(0)
-
+  const outlet = useRoutes(router)
   return (
-
-    <div>
-      122
+    <div className="App">
+      {outlet}
     </div>
-
   )
 }
 
