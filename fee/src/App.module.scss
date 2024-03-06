@@ -3,12 +3,19 @@ body {
 }
 
 .bg {
-  background-color: #bada28;
-  width: 100%;
-  height: 100%;
+  background-color: #000000;
+  // flex: 1;
+  position: absolute;
+  // height: 100%;
+  // width: 100%;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
   padding: 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .block {
@@ -19,26 +26,37 @@ body {
   border-radius: 16px;
 }
 
-.sideBlock {
-  height: 728px;
-  width: 200px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 36px;
-  padding-bottom: 36px;
-  background-color: antiquewhite;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-}
 
 .mainBlock {
-  width: 960px;
-  height: 800px;
+  width: 100%;
+  height: 100%;
   // background: var(--Elevations-Layer_3, #262626);
   // background: var(--Elevations-Layer_3, color(display-p3 0.15 0.15 0.15));
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   background-color: aquamarine;
+
+  .mContainer {
+    height: 100%;
+    width: 100%;
+    background-color: #262626;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Numbers-24, 24px);
+  }
+}
+
+.yContainer {
+  height: 100%;
+  width: 100%;
+  background-color: #262626;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Numbers-24, 24px);
 }
 
 .window {
@@ -46,46 +64,410 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 16px;
+  overflow: hidden;
 
+  height: 800px;
+  // height: 80vh;
   /* Pop-up */
   box-shadow: 0px 24px 48px 1px rgba(0, 0, 0, 0.48), 1px 4px 12px 1px rgba(0, 0, 0, 0.36);
   box-shadow: 0px 24px 48px 1px color(display-p3 0 0 0 / 0.48), 1px 4px 12px 1px color(display-p3 0 0 0 / 0.36);
 }
 
+// 窗口侧栏，用于放置导航块
 .windowSide {
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  // align-items: center;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
+  background-color: #1E1E1E;
 
   /* Pop-up */
   box-shadow: 0px 24px 48px 1px rgba(0, 0, 0, 0.48), 1px 4px 12px 1px rgba(0, 0, 0, 0.36);
   box-shadow: 0px 24px 48px 1px color(display-p3 0 0 0 / 0.48), 1px 4px 12px 1px color(display-p3 0 0 0 / 0.36);
+
+  .sideBlock {
+
+    width: 200px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    // background-color: antiquewhite;
+    // border-top-left-radius: 16px;
+    // border-bottom-left-radius: 16px;
+  }
+
+  .navItem {
+    display: flex;
+    width: 200px;
+    padding: 6px var(--Space-3, 12px);
+    align-items: center;
+    gap: var(--Space-2, 8px);
+
+    .navText {
+      color: #FFFFFF;
+    }
+  }
 }
 
+.navText:active {
+  color: #A0FF06;
+}
+
+// 窗口的主要面板
 .windowMain {
+  background-color: #9E9EA3;
   width: 960px;
-  height: 800px;
+  height: 100%;
   // background: var(--Elevations-Layer_3, #262626);
   // background: var(--Elevations-Layer_3, color(display-p3 0.15 0.15 0.15));
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
+
+  // 为「X」做铺垫
+  .topBar {
+    position: relative;
+    height: 0;
+    width: 0;
+    width: 100%;
+    background-color: #ff7e7e;
+    // 让子元素考最右边布局
+    display: flex;
+    justify-content: flex-end;
+    border-top-right-radius: 16px;
+
+    .closeBox {
+
+      width: var(--Numbers-20, 20px);
+      height: var(--Numbers-20, 20px);
+      flex-shrink: 0;
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+  }
 }
 
-.topBar {
-  width: 100%;
-  background-color: #ff7e7e;
-  // 让子元素考最右边布局
+
+
+
+.navBar {
   display: flex;
-  justify-content: flex-end;
-  border-top-right-radius: 16px;
+  padding: 6px var(--Numbers-0, 0px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Numbers-36, 36px);
+  background-color: #ff7e7e;
 }
 
-.closeBox {
-  width: var(--Numbers-20, 20px);
-  height: var(--Numbers-20, 20px);
-  flex-shrink: 0;
-  margin-top: 20px;
-  margin-right: 20px;
+.navBarItem {
+  display: flex;
+  width: 200px;
+  padding: 6px var(--Space-3, 12px);
+  align-items: center;
+  gap: var(--Space-2, 8px);
+}
+
+::navBarItem {
+  color: #A0FF06;
+}
+
+// 让两个「导航块」分立上下的容器
+.container {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  /* 例如：3行，每行大小一样 */
+  height: 100%;
+  gap: 12px;
+
+  /* 容器需要有确定的高度 */
+  .button {
+    display: flex;
+    height: 40px;
+    padding: 010px 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    background: var(--Button-primary, #23CD00);
+    background: var(--Button-primary, color(display-p3 0.4902 0.7843 0.0196));
+
+    /* Shadow_Layer_3 */
+    box-shadow: 0px 24px 48px 1px rgba(0, 0, 0, 0.12), 1px 4px 12px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 24px 48px 1px color(display-p3 0 0 0 / 0.12), 1px 4px 12px 0px color(display-p3 0 0 0 / 0.08);
+    color: var(--Text-black, #0B2B00);
+    color: var(--Text-black, color(display-p3 0.098 0.1608 0.0039));
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Noto Sans SC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    /* 142.857% */
+  }
+}
+
+
+// 替代整个导航块的「占位符」
+.navBarBlock {
+  width: 200px;
+  background-color: #46eb6a;
+  height: 102px;
+}
+
+// 主要面板的主要内容占位符
+.mBlock {
+  height: 350px;
+  width: 150px;
+  background-color: #23cbd7;
+}
+
+// 标题占位符
+.headBlock {
+  // background-color: #ff7e7e;
+  height: 84px;
+  width: 610px;
+  display: flex;
+  gap: 19px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .headTitle {
+    color: var(--Token-token_1, #FFF);
+    color: var(--Token-token_1, color(display-p3 1 1 1));
+    font-family: Oxygen;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--Button-brand, color(display-p3 0.6275 1 0.0235));
+    font-family: Oxygen;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .subtitle {
+    color: var(--Token-token_1, #FFF);
+    color: var(--Token-token_1, color(display-p3 1 1 1));
+    font-family: "Noto Sans SC";
+    font-size: 14px;
+    font-style: light;
+    font-weight: 100;
+    line-height: normal;
+  }
+}
+
+
+
+.mBcontainer {
+  height: 100%;
+  width: 100%;
+  background-color: #1d1ba7;
+  margin-left: 52px;
+  margin-right: 52px;
+  margin-top: 108px;
+  margin-bottom: 108px
+}
+
+
+
+.use {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Numbers-24, 24px);
+  background-color: #99aa50;
+}
+
+.row {
+
+  // width: 80%;
+  // height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--Numbers-8, 8px);
+  // background-color: #bada28;
+
+  .rowBlock {
+    // height: 458px;
+    // width: 856px;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
+  }
+
+  .card {
+    max-width: 280px;
+    height: 381px;
+  }
+
+  .cardContainer {
+
+
+    // display: grid;
+    display: flex;
+    flex-direction: column;
+    grid-template-rows: repeat(3, 1fr);
+    padding: var(--Numbers-32, 32px) var(--Numbers-32, 32px) 40px var(--Numbers-32, 32px);
+    /* 例如：3行，每行大小一样 */
+    // height: 100%;
+    /* 容器需要有确定的高度 */
+    // align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    // background-color: white;
+    border-radius: var(--Numbers-16, 16px);
+    border: 1px solid var(--Border-weight_1, rgba(255, 255, 255, 0.10));
+    border: 1px solid var(--Border-weight_1, color(display-p3 1 1 1 / 0.10));
+    background: var(--Layer-Layer_2, #1E1E1E);
+    background: var(--Layer-Layer_2, color(display-p3 0.1176 0.1176 0.1176));
+
+    .cardBlock {
+      background-color: #46eb6a;
+      height: 50px;
+      width: 200px;
+    }
+
+    .cardContent {
+      // background-color: #46eb6a;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+
+      .contentItem {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        // background-color: #000;
+
+        .contentItemIcon {
+          width: var(--Numbers-20, 20px);
+          height: var(--Numbers-20, 20px);
+        }
+
+        .contentItemText {
+          color: var(--Text-quaternary, #CDCDD1);
+          color: var(--Text-quaternary, color(display-p3 0.8039 0.8039 0.8196));
+          font-family: Oxygen;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+
+    .cardBlockbutton {
+      // background-color: #46eb6a;
+      // height: 50px;
+      // width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 1000px;
+      width: 100%;
+
+      .crrentButton {
+        display: flex;
+        padding: 10px 24px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 999px;
+        background: var(--Text-senary, #717175);
+        background: var(--Text-senary, color(display-p3 0.4431 0.4431 0.4588));
+
+        /* Shadow_Layer_3 */
+        box-shadow: 0px 24px 48px 1px rgba(0, 0, 0, 0.12), 1px 4px 12px 0px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 24px 48px 1px color(display-p3 0 0 0 / 0.12), 1px 4px 12px 0px color(display-p3 0 0 0 / 0.08);
+
+        .buttonText {
+          color: var(--Text-quaternary, #CDCDD1);
+          color: var(--Text-quaternary, color(display-p3 0.8039 0.8039 0.8196));
+          font-family: Oxygen;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          /* 142.857% */
+        }
+      }
+    }
+
+
+
+    .cardHead {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--Numbers-8, 8px);
+      align-self: stretch;
+      max-width: 216px;
+
+      .cardCurrent {
+        color: var(--Text-quinary, #9E9EA3);
+        color: var(--Text-quinary, color(display-p3 0.6196 0.6196 0.6392));
+        font-family: Oxygen;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .cardHeadTitle {
+        color: #FFFFFF;
+        color: var(--Text-primary, #FFF);
+        color: var(--Text-primary, color(display-p3 1 1 1));
+        font-family: Oxygen;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .cardHeadsubTitle {
+        color: var(--Text-quinary, #9E9EA3);
+        color: var(--Text-quinary, color(display-p3 0.6196 0.6196 0.6392));
+        font-family: Oxygen;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+
+
+// .a {
+//   height: 216px;
+//   width: 386px;
+//   background-color: white;
+//   margin: 2px;
+
+// }
+
+.mItem {
+  display: flex;
+  width: 280px;
+  padding: var(--Numbers-32, 32px) var(--Numbers-32, 32px) 40px var(--Numbers-32, 32px);
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: #1d1ba7;
 }
