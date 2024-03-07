@@ -1,5 +1,6 @@
 
 import styles from './App.module.scss'
+import 'classnames'
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
           </div> <div className={styles.sideBlock}>
             <div className={styles.container}>
               <div className={styles.container}>
-                <div className={styles.button}>Sign out</div>
+                {/* <div className={styles.button}>Sign out</div> */}
                 {/* <div className={styles.navBarBlock}></div> */}
               </div>
             </div>
@@ -82,9 +83,9 @@ function App() {
                         <div className={styles.contentItemIcon} >
                           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path
-                              opacity="0.2"
+                              opacity="2"
                               d="M17.5 10C17.5 11.4834 17.0601 12.9334 16.236 14.1668C15.4119 15.4001 14.2406 16.3614 12.8701 16.9291C11.4997 17.4968 9.99168 17.6453 8.53683 17.3559C7.08197 17.0665 5.7456 16.3522 4.6967 15.3033C3.64781 14.2544 2.9335 12.918 2.64411 11.4632C2.35472 10.0083 2.50325 8.50032 3.07091 7.12987C3.63856 5.75943 4.59986 4.58809 5.83323 3.76398C7.0666 2.93987 8.51664 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10Z"
-                              fill="#CDCDD1"
+                              fill="white"
                               style={{ fill: "#CDCDD1", fillOpacity: 1 }}
                             />
                             <path
@@ -111,7 +112,7 @@ function App() {
                             />
                           </svg>
                         </div>
-                        <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                        <div className={styles.contentItemTextfade}>Adjustable Settings</div>
                       </div>
 
                       <div className={styles.contentItem}>
@@ -129,7 +130,7 @@ function App() {
                             />
                           </svg>
                         </div>
-                        <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                        <div className={styles.contentItemTextfade}>9 Images Per Generation </div>
                       </div>
 
                       <div className={styles.contentItem}>
@@ -147,7 +148,7 @@ function App() {
                             />
                           </svg>
                         </div>
-                        <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                        <div className={styles.contentItemTextfade}>Image to Image Generation</div>
                       </div>
                       <div className={styles.contentItem}>
                         <div className={styles.contentItemIcon} >
@@ -164,7 +165,7 @@ function App() {
                             />
                           </svg>
                         </div>
-                        <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                        <div className={styles.contentItemTextfade}>Pro Image Gallery</div>
                       </div>
                     </div>
 
@@ -179,14 +180,14 @@ function App() {
                 <div className={styles.cardContainer}>
                   {/* <div className={styles.d}> */}
                   <div className={styles.cardHead}>
-                    <div className={styles.cardCurrent}>
-                      current
+                    <div className={styles.cardCurrentGreen}>
+                      Plus*
                     </div>
-                    <div className={styles.cardHeadTitle}>
-                      Free to use
+                    <div className={styles.cardHeadTitleGreen}>
+                      $100/month
                     </div>
                     <div className={styles.cardHeadsubTitle}>
-                      Try the State-of-the-art ML image generation workflow
+                      For more effective and professional image creation
                     </div>
                   </div>
 
@@ -196,9 +197,9 @@ function App() {
                       <div className={styles.contentItemIcon} >
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                           <path
-                            opacity="0.2"
+                            opacity="2"
                             d="M17.5 10C17.5 11.4834 17.0601 12.9334 16.236 14.1668C15.4119 15.4001 14.2406 16.3614 12.8701 16.9291C11.4997 17.4968 9.99168 17.6453 8.53683 17.3559C7.08197 17.0665 5.7456 16.3522 4.6967 15.3033C3.64781 14.2544 2.9335 12.918 2.64411 11.4632C2.35472 10.0083 2.50325 8.50032 3.07091 7.12987C3.63856 5.75943 4.59986 4.58809 5.83323 3.76398C7.0666 2.93987 8.51664 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10Z"
-                            fill="#CDCDD1"
+                            fill="white"
                             style={{ fill: "#CDCDD1", fillOpacity: 1 }}
                           />
                           <path
@@ -225,7 +226,7 @@ function App() {
                           />
                         </svg>
                       </div>
-                      <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                      <div className={styles.contentItemText}>Adjustable Settings</div>
                     </div>
 
                     <div className={styles.contentItem}>
@@ -243,7 +244,7 @@ function App() {
                           />
                         </svg>
                       </div>
-                      <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                      <div className={styles.contentItemText}>9 Images Per Generation </div>
                     </div>
 
                     <div className={styles.contentItem}>
@@ -261,7 +262,7 @@ function App() {
                           />
                         </svg>
                       </div>
-                      <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                      <div className={styles.contentItemText}>Image to Image Generation</div>
                     </div>
                     <div className={styles.contentItem}>
                       <div className={styles.contentItemIcon} >
@@ -278,13 +279,13 @@ function App() {
                           />
                         </svg>
                       </div>
-                      <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                      <div className={styles.contentItemText}>Pro Image Gallery</div>
                     </div>
                   </div>
 
                   <div className={styles.cardBlockbutton}>
-                    <div className={styles.crrentButton}>
-                      <div className={styles.buttonText}>Current</div>
+                    <div className={styles.crrentButtonGreen}>
+                      <div className={styles.buttonText}>Upgrade</div>
                     </div>
                   </div>
                 </div>
@@ -292,14 +293,14 @@ function App() {
                 <div className={styles.cardContainer}>
                   {/* <div className={styles.d}> */}
                   <div className={styles.cardHead}>
-                    <div className={styles.cardCurrent}>
-                      current
+                    <div className={styles.cardCurrentGreen}>
+                      Contact Us
                     </div>
-                    <div className={styles.cardHeadTitle}>
-                      Free to use
+                    <div className={styles.cardHeadTitleGreen}>
+                      Enterprise
                     </div>
                     <div className={styles.cardHeadsubTitle}>
-                      Try the State-of-the-art ML image generation workflow
+                      Advanced controls & support to run your entire organisation.
                     </div>
                   </div>
 
@@ -309,9 +310,9 @@ function App() {
                       <div className={styles.contentItemIcon} >
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                           <path
-                            opacity="0.2"
+                            opacity="2"
                             d="M17.5 10C17.5 11.4834 17.0601 12.9334 16.236 14.1668C15.4119 15.4001 14.2406 16.3614 12.8701 16.9291C11.4997 17.4968 9.99168 17.6453 8.53683 17.3559C7.08197 17.0665 5.7456 16.3522 4.6967 15.3033C3.64781 14.2544 2.9335 12.918 2.64411 11.4632C2.35472 10.0083 2.50325 8.50032 3.07091 7.12987C3.63856 5.75943 4.59986 4.58809 5.83323 3.76398C7.0666 2.93987 8.51664 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10Z"
-                            fill="#CDCDD1"
+                            fill="white"
                             style={{ fill: "#CDCDD1", fillOpacity: 1 }}
                           />
                           <path
@@ -338,7 +339,7 @@ function App() {
                           />
                         </svg>
                       </div>
-                      <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                      <div className={styles.contentItemText}>Adjustable Settings</div>
                     </div>
 
                     <div className={styles.contentItem}>
@@ -356,7 +357,7 @@ function App() {
                           />
                         </svg>
                       </div>
-                      <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                      <div className={styles.contentItemText}>9 Images Per Generation </div>
                     </div>
 
                     <div className={styles.contentItem}>
@@ -374,7 +375,7 @@ function App() {
                           />
                         </svg>
                       </div>
-                      <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                      <div className={styles.contentItemText}>Image to Image Generation</div>
                     </div>
                     <div className={styles.contentItem}>
                       <div className={styles.contentItemIcon} >
@@ -391,13 +392,13 @@ function App() {
                           />
                         </svg>
                       </div>
-                      <div className={styles.contentItemText}>Ultimate Generation Speed</div>
+                      <div className={styles.contentItemText}>Pro Image Gallery</div>
                     </div>
                   </div>
 
                   <div className={styles.cardBlockbutton}>
-                    <div className={styles.crrentButton}>
-                      <div className={styles.buttonText}>Current</div>
+                    <div className={styles.crrentButtonGreen}>
+                      <div className={styles.buttonText}>Conttact Us</div>
                     </div>
                   </div>
                 </div>

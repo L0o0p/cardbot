@@ -365,6 +365,16 @@ body {
           font-weight: 400;
           line-height: normal;
         }
+
+        .contentItemTextfade {
+          color: var(--System-info-disable, rgba(255, 255, 255, 0.17));
+          color: var(--System-info-disable, color(display-p3 1 1 1 / 0.17));
+          font-family: Oxygen;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
       }
     }
 
@@ -406,6 +416,36 @@ body {
           /* 142.857% */
         }
       }
+
+      .crrentButtonGreen {
+        display: flex;
+        width: 100%;
+        padding: 10px 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+
+        border-radius: 999px;
+        background: var(--AI_Green-AI_Green_5, #2DFF00);
+        background: var(--AI_Green-AI_Green_5, color(display-p3 0.6275 1 0.0235));
+
+        /* Shadow_Layer_3 */
+        box-shadow: 0px 24px 48px 1px rgba(0, 0, 0, 0.12), 1px 4px 12px 0px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 24px 48px 1px color(display-p3 0 0 0 / 0.12), 1px 4px 12px 0px color(display-p3 0 0 0 / 0.08);
+      }
+
+      .buttonText {
+        color: var(--AI_Green-AI_Green_10, #124400);
+        color: var(--AI_Green-AI_Green_10, color(display-p3 0.1608 0.2588 0.0039));
+        font-family: Oxygen;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        /* 142.857% */
+      }
     }
 
 
@@ -428,12 +468,32 @@ body {
         line-height: normal;
       }
 
+      .cardCurrentGreen {
+        color: var(--Text-brand, #2DFF00);
+        color: var(--Text-brand, color(display-p3 0.6275 1 0.0235));
+        font-family: Oxygen;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
       .cardHeadTitle {
         color: #FFFFFF;
         color: var(--Text-primary, #FFF);
         color: var(--Text-primary, color(display-p3 1 1 1));
         font-family: Oxygen;
-        font-size: 36px;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      .cardHeadTitleGreen {
+        color: var(--Text-brand, #2DFF00);
+        color: var(--Text-brand, color(display-p3 0.6275 1 0.0235));
+        font-family: Oxygen;
+        font-size: 32px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
