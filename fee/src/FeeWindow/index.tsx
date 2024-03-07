@@ -54,9 +54,9 @@ function App() {
                             {/* <div className={styles.use}> */}
                             <div className={styles.headBlock}>
                                 <div className={styles.headTitle}>
-                                    <a className={styles.yes}>
+                                    <div className={styles.yes}>
                                         Unleash Your <div className={styles.yesMid}> Full Potential</div>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div className={styles.subtitle}>
                                     Unlock more professional features and lighting-fast creation speed with CYTE.AI membership.
@@ -254,7 +254,7 @@ function App() {
 
                                     <div className={styles.cardBlockbutton}>
                                         <div className={styles.crrentButtonGreen}>
-                                            <div className={styles.buttonText}>Upgrade</div>
+                                            <div className={styles.buttonTextGreen}>Upgrade</div>
                                         </div>
                                     </div>
                                 </div>
@@ -347,7 +347,7 @@ function App() {
 
                                     <div className={styles.cardBlockbutton}>
                                         <div className={styles.crrentButtonGreen}>
-                                            <div className={styles.buttonText}>Conttact Us</div>
+                                            <div className={styles.buttonTextGreen}>Conttact Us</div>
                                         </div>
                                     </div>
                                 </div>

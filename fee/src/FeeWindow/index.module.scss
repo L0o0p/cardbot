@@ -89,7 +89,9 @@ body {
   box-shadow: 0px 24px 48px 1px color(display-p3 0 0 0 / 0.48), 1px 4px 12px 1px color(display-p3 0 0 0 / 0.36);
 
   .sideBlock {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     padding-left: 24px;
     padding-right: 24px;
@@ -102,13 +104,23 @@ body {
 
   .navItem {
     display: flex;
-    width: 200px;
+    // width: 100%;
     padding: 6px var(--Space-3, 12px);
     align-items: center;
     gap: var(--Space-2, 8px);
 
     .navText {
-      color: #FFFFFF;
+      // color: #FFFFFF;
+      flex: 1 0 0;
+
+      color: var(--Text-primary, #FFF);
+      color: var(--Text-primary, color(display-p3 1 1 1));
+      font-family: Oxygen;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      /* 125% */
     }
   }
 }
@@ -181,6 +193,7 @@ body {
   /* 例如：3行，每行大小一样 */
   height: 100%;
   gap: 12px;
+  width: 200px;
 
   /* 容器需要有确定的高度 */
   .button {
@@ -391,16 +404,16 @@ body {
 
       .crrentButton {
         display: flex;
-        padding: 10px 24px;
         width: 100%;
+        padding: 10px 24px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
         align-self: stretch;
         border-radius: 999px;
-        background: var(--Text-senary, #717175);
-        background: var(--Text-senary, color(display-p3 0.4431 0.4431 0.4588));
+        background: var(--Layer-Layer_4, #353535);
+        background: var(--Layer-Layer_4, color(display-p3 0.2078 0.2078 0.2078));
 
         /* Shadow_Layer_3 */
         box-shadow: 0px 24px 48px 1px rgba(0, 0, 0, 0.12), 1px 4px 12px 0px rgba(0, 0, 0, 0.08);
@@ -412,7 +425,7 @@ body {
           font-family: "Oxygen";
           font-size: 14px;
           font-style: normal;
-          font-weight: 700;
+          font-weight: 400;
           line-height: 20px;
           /* 142.857% */
         }
@@ -437,10 +450,10 @@ body {
         box-shadow: 0px 24px 48px 1px color(display-p3 0 0 0 / 0.12), 1px 4px 12px 0px color(display-p3 0 0 0 / 0.08);
       }
 
-      .buttonText {
+      .buttonTextGreen {
         color: var(--AI_Green-AI_Green_10, #124400);
         color: var(--AI_Green-AI_Green_10, color(display-p3 0.1608 0.2588 0.0039));
-        font-family: "Oxygen";
+        font-family: Oxygen;
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
