@@ -241,13 +241,13 @@ body {
   .headTitle {
     color: var(--Token-token_1, #FFF);
     color: var(--Token-token_1, color(display-p3 1 1 1));
-    font-family: Oxygen;
+    font-family: "Oxygen";
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     color: var(--Button-brand, color(display-p3 0.6275 1 0.0235));
-    font-family: Oxygen;
+    font-family: "Oxygen";
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
@@ -359,7 +359,7 @@ body {
         .contentItemText {
           color: var(--Text-quaternary, #CDCDD1);
           color: var(--Text-quaternary, color(display-p3 0.8039 0.8039 0.8196));
-          font-family: Oxygen;
+          font-family: "Oxygen";
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -369,11 +369,12 @@ body {
         .contentItemTextfade {
           color: var(--System-info-disable, rgba(255, 255, 255, 0.17));
           color: var(--System-info-disable, color(display-p3 1 1 1 / 0.17));
-          font-family: Oxygen;
+          font-family: "Oxygen";
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
+          // color: red;
         }
       }
     }
@@ -408,7 +409,7 @@ body {
         .buttonText {
           color: var(--Text-quaternary, #CDCDD1);
           color: var(--Text-quaternary, color(display-p3 0.8039 0.8039 0.8196));
-          font-family: Oxygen;
+          font-family: "Oxygen";
           font-size: 14px;
           font-style: normal;
           font-weight: 700;
@@ -439,7 +440,7 @@ body {
       .buttonText {
         color: var(--AI_Green-AI_Green_10, #124400);
         color: var(--AI_Green-AI_Green_10, color(display-p3 0.1608 0.2588 0.0039));
-        font-family: Oxygen;
+        font-family: "Oxygen";
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
@@ -458,10 +459,14 @@ body {
       align-self: stretch;
       max-width: 216px;
 
+      .BnS {
+        display: flex;
+      }
+
       .cardCurrent {
         color: var(--Text-quinary, #9E9EA3);
         color: var(--Text-quinary, color(display-p3 0.6196 0.6196 0.6392));
-        font-family: Oxygen;
+        font-family: "Oxygen";
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
@@ -471,18 +476,25 @@ body {
       .cardCurrentGreen {
         color: var(--Text-brand, #2DFF00);
         color: var(--Text-brand, color(display-p3 0.6275 1 0.0235));
-        font-family: Oxygen;
+        font-family: "Oxygen";
         font-size: 20px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
       }
 
+      .toBottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 6px;
+      }
+
       .cardHeadTitle {
         color: #FFFFFF;
         color: var(--Text-primary, #FFF);
         color: var(--Text-primary, color(display-p3 1 1 1));
-        font-family: Oxygen;
+        font-family: "Oxygen";
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
@@ -492,7 +504,7 @@ body {
       .cardHeadTitleGreen {
         color: var(--Text-brand, #2DFF00);
         color: var(--Text-brand, color(display-p3 0.6275 1 0.0235));
-        font-family: Oxygen;
+        font-family: "Oxygen";
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
@@ -502,11 +514,12 @@ body {
       .cardHeadsubTitle {
         color: var(--Text-quinary, #9E9EA3);
         color: var(--Text-quinary, color(display-p3 0.6196 0.6196 0.6392));
-        font-family: Oxygen;
+        font-family: "Oxygen";
         font-size: 12px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 300;
         line-height: normal;
+        // color: red;
       }
     }
   }
@@ -530,4 +543,15 @@ body {
   align-items: center;
   gap: 40px;
   background-color: #1d1ba7;
+}
+
+.yes {
+  display: flex;
+  color: var(--Token-token_1, #FFF);
+  color: var(--Token-token_1, color(display-p3 1 1 1));
+
+  .yesMid {
+    margin-left: 12px;
+    color: var(--Button-brand, color(display-p3 0.6275 1 0.0235));
+  }
 }
