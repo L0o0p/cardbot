@@ -4,11 +4,11 @@ interface getMessageProps {
     prompt: string;
     setPrompt: (arg0: string) => void
     appendCard: (newCard: { emoji: string; title: string; content: string; }) => void;
-    setResult: (arg0: string) => void
+    setResult: (result: { emoji: string; title: string; content: string; }) => void;
 }
 
 export async function getMessage(props: getMessageProps) {
-    const { prompt, setPrompt, appendCard, setResult } = props
+    const { prompt, setPrompt, appendCard } = props
     console.log('prompt', prompt);
     if (!checkIfUrl(prompt)) {
         try {
@@ -23,7 +23,7 @@ export async function getMessage(props: getMessageProps) {
             // setResult('Error sending message');
         }
     } else {
-        const getWebContent = await getWebInfo(prompt, setResult)
+        const getWebContent = await getWebInfo(prompt)
         console.log(getWebContent?.webContent);
         const webContent = getWebContent?.webContent
         if (webContent) setPrompt('帮我总结一下这个网页的信息和内容，并按照要求格式返回：' + webContent);
@@ -66,7 +66,7 @@ async function sendMessage(prompt: getMessageProps["prompt"]) {
         console.log('Response:', feedBack);
         return { feedBack }
     } catch (error) {
-        const axiosError = error as AxiosError;
+        const axiosError = error as AxiosError<{ message: string }>;
         if (axiosError.response) {
             console.error('Error Status:', axiosError.response.status);
             console.error('Error Data:', axiosError.response.data);
@@ -132,7 +132,7 @@ function checkIfUrl(input: string): boolean {
 
     return urlPattern.test(input);
 }
-const getWebInfo = async (url: string, setResult: (arg0: string) => void) => {
+const getWebInfo = async (url: string) => {
     let webContent;
     console.log('开始爬虫');
     if (!url) {
@@ -140,7 +140,6 @@ const getWebInfo = async (url: string, setResult: (arg0: string) => void) => {
         return;
     }
 
-    setResult('正在爬虫，请稍候...');
 
     try {
         const response = await fetch('http://localhost:3000/scrape', {
@@ -155,18 +154,18 @@ const getWebInfo = async (url: string, setResult: (arg0: string) => void) => {
 
         if (response.ok) {
             webContent = JSON.stringify(data.texts, null, 2)
-            setResult(webContent);
             console.log(webContent);
 
         } else {
-            setResult('爬虫失败：' + data.error);
+            // setResult('爬虫失败：' + data.error);
         }
     } catch (error: unknown) {  // 使用 `any` 类型来避免类型检查问题
         let errorMessage = '未知错误';
         if (error && typeof error === 'object' && 'message' in error) {
             errorMessage = (error as Error).message;
+            console.log(errorMessage);
+
         }
-        setResult('爬虫失败：' + errorMessage);
     }
 
     return { webContent }
