@@ -97,24 +97,24 @@
 
 .sumitButton {
     cursor: pointer;
+    display: flex;
+    gap: 4px;
+    align-items: center;
     font-family: "PingFang SC";
-    text-align: center;
     // background-color: #007bff;
     background-color: white;
     border: none;
     border-radius: 5px;
-    padding: 6px 20px;
-    font-size: 16px;
+    padding: 12px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
-    // background-color: #0056b3;
     transition: background-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .sumitButton:hover {
-    background-color: #0056b3;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background-color: rgb(222, 222, 222);
 }
 
 .sumitButtonText {

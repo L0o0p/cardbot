@@ -106,7 +106,7 @@ function seperateFeedBack(feedBack: string) {
     }
 
     // 提取标题和内容
-    const title = feedBack.substring(6, secondNewLineIndex);
+    const title = feedBack.substring(emojiIndex, secondNewLineIndex);
     const content = feedBack.substring(secondNewLineIndex + 1); // +1 跳过换行符
 
     const processedResults = {

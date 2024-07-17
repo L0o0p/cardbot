@@ -35,6 +35,21 @@ export function SideSection() {
                         onClick={sumit}
                     >
                         <div className={styles.sumitButtonText}>Create Card-moji</div>
+
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.33334 2L12.6667 8L3.33334 14V2Z"
+                                stroke="#2C2C2C"
+                                style={{
+                                    stroke: '#2C2C2C',
+                                    strokeOpacity: 1
+                                }}
+                                strokeWidth="1.6"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+
                     </div>
                 </div>
             </div>
