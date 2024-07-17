@@ -1,0 +1,17 @@
+.container {
+    padding: 0 34px 0 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 15px;
+    background-image: url('/img/bg.jpeg');
+    background-position: center;
+    /* 背景图片居中 */
+    background-repeat: no-repeat;
+    /* 不重复背景图片 */
+    background-size: cover;
+    /* 背景图片覆盖整个元素 */
+    // background-size: contain;
+    /* 背景图片完整显示 */
+}

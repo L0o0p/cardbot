@@ -1,0 +1,155 @@
+.mainSection {
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    padding: 0 34px 0 34px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.height {
+    height: 864px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px; // 设置滚动条宽度
+        background: transparent; // 初始背景透明
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent; // 滚动条滑块初始为透明
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    grid-gap: 30px 32px;
+}
+
+.logCard {
+    display: flex;
+    width: 315px;
+    padding: 6px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    border-radius: 6px;
+    border: 0.75px solid rgba(0, 0, 0, 0.30);
+    border: 0.75px solid color(display-p3 0 0 0 / 0.30);
+    background: #E6E6E6;
+    background: color(display-p3 0.902 0.902 0.902);
+}
+
+.headerLine {
+    line-height: 43.5px;
+    display: flex;
+    padding: 2px 8px;
+    align-items: center;
+    gap: 10.875px;
+    align-self: stretch;
+
+    .header {
+        color: #FFF;
+        color: color(display-p3 1 1 1);
+        font-family: Inter;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 3.75px;
+    border: 0.75px solid rgba(0, 0, 0, 0.30);
+    border: 0.75px solid color(display-p3 0 0 0 / 0.30);
+    background: #FFF;
+    background: color(display-p3 1 1 1);
+}
+
+.l {
+    display: flex;
+    padding: 18px;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    align-self: stretch;
+    height: 100px;
+}
+
+.title {
+    align-self: stretch;
+    color: #000;
+    color: color(display-p3 0 0 0);
+    font-family: "PingFang SC";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+.lContent {
+    align-self: stretch;
+    color: rgba(0, 0, 0, 0.60);
+    color: color(display-p3 0 0 0 / 0.60);
+    font-family: "PingFang SC";
+    font-size: 10.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px; // 设置滚动条宽度
+        background: transparent; // 初始背景透明
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent; // 滚动条滑块初始为透明
+    }
+
+}
+
+@media (max-width:1440px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px;
+        grid-gap: 30px 32px;
+    }
+}
+
+@media (min-width:1560px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px;
+        grid-gap: 30px 32px;
+    }
+}
+
+@media (min-width:1920px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 200px;
+        grid-gap: 30px 32px;
+    }
+
+    .height {
+        height: 960px;
+        overflow: auto;
+    }
+}

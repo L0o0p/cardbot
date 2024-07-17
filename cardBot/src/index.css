@@ -1,0 +1,11 @@
+body {
+    overflow: hidden;
+}
+
+ul,
+ol {
+    list-style-type: disc;
+    /* 确保使用圆点样式 */
+    padding-left: 20px;
+    /* 添加左侧填充以显示圆点 */
+}

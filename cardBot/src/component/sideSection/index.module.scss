@@ -1,0 +1,137 @@
+.sideSection {
+    // color: red;
+    // padding: 20px;
+    color: #000;
+    color: color(display-p3 0 0 0);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logCard {
+    display: flex;
+    width: 315px;
+    padding: 6px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    border-radius: 6px;
+    border: 0.75px solid rgba(0, 0, 0, 0.30);
+    border: 0.75px solid color(display-p3 0 0 0 / 0.30);
+    background: #E6E6E6;
+    background: color(display-p3 0.902 0.902 0.902);
+    height: 864px;
+}
+
+.header {
+    display: flex;
+    padding: 2px 8px;
+    align-items: center;
+    gap: 10.875px;
+    align-self: stretch;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 3.75px;
+    border: 0.75px solid rgba(0, 0, 0, 0.30);
+    border: 0.75px solid color(display-p3 0 0 0 / 0.30);
+    background: #FFF;
+    background: color(display-p3 1 1 1);
+}
+
+.l {
+    display: flex;
+    padding: 18px;
+    height: 754px;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    align-self: stretch;
+    box-sizing: border-box;
+}
+
+.title {
+    align-self: stretch;
+    color: #000;
+    color: color(display-p3 0 0 0);
+    font-family: "PingFang SC";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.lContent {
+    align-self: stretch;
+    color: rgba(0, 0, 0, 0.60);
+    color: color(display-p3 0 0 0 / 0.60);
+    font-family: "PingFang SC";
+    font-size: 10.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.buttonContainer {
+    // background-color: red;
+    box-sizing: border-box;
+    padding: 4px 0 4px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sumitButton {
+    cursor: pointer;
+    font-family: "PingFang SC";
+    text-align: center;
+    // background-color: #007bff;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    // background-color: #0056b3;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sumitButton:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sumitButtonText {
+    color: var(--sds-color-text-brand-on-brand-tertiary);
+
+    /* Single Line/Body Small Strong */
+    font-family: var(--sds-typography-body-font-family);
+    font-size: var(--sds-typography-body-size-small);
+    font-style: normal;
+    font-weight: var(--sds-typography-body-font-weight-strong);
+    line-height: 14px;
+    /* 14px */
+
+}
+
+@media (min-width:1920px) {
+    .logCard {
+        height: 960px;
+    }
+}
